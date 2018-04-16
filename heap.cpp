@@ -1,4 +1,3 @@
-#include<iostream>
 using namespace std;
 
 void swap(int *x, int *y);
@@ -49,5 +48,21 @@ void Maxheap::deletion(){
 	if(arr[left(i)]==hlength && arr[right(i)]==hlength){
 		return;
 	}
-	
+  while(arr[left(i)]<hlength){
+         if(arr[right(i)]==hlength){
+                  if(arr[left(i)]>arr[i]){
+                        swap(&arr[left(i)],&arr[i]);
+                   }
+          break;
+         }
+       
+        else if(arr[right(i)]<hlength){
+              if(arr[left(i)]>arr[right(i)]){
+                   if(arr[left(i)]>arr[i]){
+                         swap(&arr[left(i)],&arr[i]);
+                    }
+              }
+              else if(arr[right(i)]>arr[left(i)]){
+                    if(arr[right(i)]>arr[i]
+ 	
 }
